@@ -2,9 +2,10 @@ library("ggplot2")
 library("plotly")
 library("dplyr")
 library("scales")
+library("stringr")
 
 # 1. Creating the data frame
-spl_df <- read.csv("Desktop/INFO201/week-7-exercises-Andy427/2017-2023-10-Checkouts-SPL-Data.csv")
+spl_df <- read.csv("/Users/Andy/Desktop/INFO201/week-7-exercises-Andy427/2017-2023-10-Checkouts-SPL-Data.csv")
 
 ## Chart Two: UsageClass over time
 usage_over_time <- spl_df %>% group_by(CheckoutYear) %>% summarise(PhysicalUsage = sum(str_detect(UsageClass, "Physical")))

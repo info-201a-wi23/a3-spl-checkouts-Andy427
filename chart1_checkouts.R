@@ -2,9 +2,10 @@ library("ggplot2")
 library("plotly")
 library("dplyr")
 library("scales")
+library("webshot")
 
 # 1. Creating the data frame
-spl_df <- read.csv("Desktop/INFO201/week-7-exercises-Andy427/2017-2023-10-Checkouts-SPL-Data.csv")
+spl_df <- read.csv("/Users/Andy/Desktop/INFO201/week-7-exercises-Andy427/2017-2023-10-Checkouts-SPL-Data.csv")
 
 ## Chart One: Checkouts over time
 spl_df <- spl_df %>% mutate(Date = as.Date(paste0("1", "/", CheckoutMonth, "/", CheckoutYear), format = "%d/%m/%Y"))
