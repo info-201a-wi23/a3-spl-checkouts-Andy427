@@ -1,96 +1,59 @@
 ---
 title: "A3: SPL Library Checkouts"
 output: html_document
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items
-you are choosing to analyze (and why!)
+An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
 
-The data that I will be looking at today is all items checked out at
-least 10 times a month from 2017 to 2023. Im choosing to analyze the
-following trends: Checkouts over time, UsageClass over time, and
-finally, the most read authors. Im choosing to do so because I want to
-see how checkouts the SPLs have changed over time, especially once COVID
-hit. For that same reason, I'm also taking a look at the UsageClass. I
-want to see if Physical Books decline. And finally, I'm looking at most
-read authors because I just want to see which authors are the most
-popular.
+The data that I will be looking at today is all items checked out at least 10 times a month from 2017 to 2023. I'm choosing to analyze the following trends: Checkouts over time, UsageClass over time, and finally, the most read authors. Im choosing to do so because I want to see how checkouts the SPLs have changed over time, especially once COVID hit. For that same reason, I'm also taking a look at the UsageClass. I want to see if Physical Books decline. And finally, I'm looking at most read authors because I just want to see which authors are the most popular.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values
-calculated from your summary information R script
+Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
-From my summary statistics script, I found the following information: I
-found that the average number of checkouts was 23.48, the most common
-type that was checked out was visual, the most common UsageClass is
-Physical, the most popular author is Ijeoma Oluo, and the most checked
-out book was "So You Want to Talk about Race (Unabridged)"
+From my summary statistics script, I found the following information: I found that the average number of checkouts was 23.48, the most common type that was checked out was visual, the most common UsageClass is Physical, the most popular author is Ijeoma Oluo, and the most checked out book was "So You Want to Talk about Race (Unabridged)"
 
-### The Dataset
+### The Data set
 
 -   Who collected/published the data?
     -   The Seattle Public Library
--   What are the parameters of the data (dates, number of checkouts,
-    kinds of books, etc.)?
-    -   The parameter of the data is UsageClass, CheckoutType,
-        MaterialType, CheckoutYear, CheckoutMonth, Checkouts, Title,
-        ISBN, Creator, Subjects, Publisher, and PublicationYear
+-   What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+    -   The parameter of the data is UsageClass, CheckoutType, MaterialType, CheckoutYear, CheckoutMonth, Checkouts, Title, ISBN, Creator, Subjects, Publisher, and PublicationYear
 -   How was the data collected or generated?
-    -   The data was collected by the Seattle Public Library who kept
-        track of all the parameters as different books and more were ran
-        through their system
+    -   The data was collected by the Seattle Public Library who kept track of all the parameters as different books and more were ran through their system
 -   Why was the data collected?
-    -   The data was collected to simply have access to this kind of
-        data. So that trends in the SPL could be kept track of and
-        analyzed over time.
--   What, if any, ethical questions do you need to consider when working
-    with this data?
-    -   Ethically, there are a few possible issues. The main one is that
-        some people might not want others to know what books they're
-        checking out. And by keeping track of this data, SPL is
-        infringing on their right to privacy.
--   What are possible limitations or problems with this data? (at least
-    200 words)
-    -   Some possible limitations that face this dataset is the fact
-        that it is not inclusive. The dataset that I chose was the
-        dataset that only kept track of books that were checked out at
-        least 10 times. This means any book that was checked out less
-        than 10 times was not included in this data, which could
-        potentially skew trends since we don't know how many books were
-        checked out under 10 times in this data set. Moreover, some
-        other limitations that could arise from this dataset is that
-        this is only from SPL, which doesn't account for things such as
-        the purchase of Ebooks or Normal books from book shops around
-        Seattle or online, so this data is missing a crucial part and
-        fails to properly account for all possible outcomes. This makes
-        the data very limited in that it is only really applicable to
-        SPL.
+    -   The data was collected to simply have access to this kind of data. So that trends in the SPL could be kept track of and analyzed over time.
+-   What, if any, ethical questions do you need to consider when working with this data?
+    -   Ethically, there are a few possible issues. The main one is that some people might not want others to know what books they're checking out. And by keeping track of this data, SPL is infringing on their right to privacy.
+-   What are possible limitations or problems with this data? (at least 200 words)
+    -   Some possible limitations that face this data set is the fact that it is not inclusive. The data set that I chose was the data set that only kept track of books that were checked out at least 10 times. This means any book that was checked out less than 10 times was not included in this data, which could potentially skew trends since we don't know how many books were checked out under 10 times in this data set. Moreover, some other limitations that could arise from this data set is that this is only from SPL, which doesn't account for things such as the purchase of E books or Normal books from book shops around Seattle or online, so this data is missing a crucial part and fails to properly account for all possible outcomes. This makes the data very limited in that it is only really applicable to SPL.
 
 ### Checkouts Over Time
 
-I decided to include this chart because I wanted to see how checkouts
-changed overtime. Mainly, I wanted to see what happens when things such
-as Ebooks become more popular and when COVID hit.
+I decided to include this chart because I wanted to see how checkouts changed overtime. Mainly, I wanted to see what happens when things such as E books become more popular and when COVID hit.
 
-\`\`\``{r, echo = FALSE, warning = FALSE, code = readLines("chart1_checkouts.R")}`
+```{r, echo = FALSE, code = readLines("/Users/Andy/Desktop/INFO201/a3-spl-checkouts-Andy427/chart1_checkouts.R")}
+
+```
 
 ### Physical Use Over Time
 
-I decided to include this one because I wanted to see what happend to
-phyiscal usage over time when something like COIVD happens and how it
-would recover post-lockdown
+I decided to include this one because I wanted to see what happened to physical usage over time when something like COIVD happens and how it would recover post-lockdown
 
-\`\`\``{r, echo = FALSE, code = readLines("chart2_usage.R")}`
+```{r, echo = FALSE, code = readLines("/Users/Andy/Desktop/INFO201/a3-spl-checkouts-Andy427/chart2_usage.R")}
+
+```
 
 ### Your Choice
 
-I decided to include this chart because I wanted to see who the most
-popular authors are.
+I decided to include this chart because I wanted to see who the most popular authors are.
 
-\`\`\``{r, echo = FALSE, code = readLines("chart3_authors.R")}`
+```{r, echo = FALSE, code = readLines("/Users/Andy/Desktop/INFO201/a3-spl-checkouts-Andy427/chart3_authors.R")}
+
+```
